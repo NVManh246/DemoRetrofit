@@ -6,12 +6,14 @@ import java.util.List;
 
 public interface HerosDataSource {
 
-    interface OnCompleteListener {
-        void onSuccess(List<Hero> heros);
+    interface OnCompleteListener<T> {
+        void onSuccess(T t);
         void onFailed(Exception e);
     }
 
     interface HerosRemoteDataSource {
+        void getHero(int id, OnCompleteListener callBack);
         void getHeros(OnCompleteListener callback);
+        void searchHeros(String key, OnCompleteListener callback);
     }
 }

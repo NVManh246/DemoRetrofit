@@ -1,17 +1,24 @@
 package com.example.nvmanh.demoretrofit.data.model;
 
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import java.io.Serializable;
 
-public class Hero {
+public class Hero implements Serializable{
     @SerializedName("ma")
+    @Expose
     private String mId;
     @SerializedName("ten1")
+    @Expose
     private String mName1;
     @SerializedName("ten2")
+    @Expose
     private String mName2;
     @SerializedName("anhDaiDien")
+    @Expose
     private String mAvatar;
     @SerializedName("truyenThuyet")
+    @Expose
     private String mHistory;
 
     public Hero() {

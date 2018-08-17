@@ -19,10 +19,26 @@ public class MainPresenter implements MainContact.Presenter {
 
     @Override
     public void getHeros() {
-        mRepository.getHeros(new HerosDataSource.OnCompleteListener() {
+        mRepository.getHeros(new HerosDataSource.OnCompleteListener<List<Hero>>() {
+
             @Override
-            public void onSuccess(List<Hero> heros) {
-                mView.showHeros(heros);
+            public void onSuccess(List<Hero> heroes) {
+                mView.showHeros(heroes);
+            }
+
+            @Override
+            public void onFailed(Exception e) {
+                mView.showErros();
+            }
+        });
+    }
+
+    @Override
+    public void searchHeros(String key) {
+        mRepository.searchHeros(key, new HerosDataSource.OnCompleteListener<List<Hero>>() {
+            @Override
+            public void onSuccess(List<Hero> heroes) {
+                mView.showHeros(heroes);
             }
 
             @Override

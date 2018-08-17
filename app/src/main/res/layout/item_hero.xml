@@ -8,7 +8,9 @@
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_4"
+        >
 
         <ImageView
             android:id="@+id/image_hero"
@@ -38,7 +40,19 @@
             app:layout_constraintLeft_toRightOf="@+id/image_hero"
             app:layout_constraintTop_toBottomOf="@+id/text_name1"
             android:layout_marginLeft="@dimen/dp_10"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="@android:color/holo_red_dark"
+            />
+
+        <TextView
+            android:id="@+id/text_history"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/image_hero"
+            app:layout_constraintTop_toBottomOf="@+id/text_name2"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:maxLines="4"
+            android:ellipsize="end"
             />
 
     </android.support.constraint.ConstraintLayout>

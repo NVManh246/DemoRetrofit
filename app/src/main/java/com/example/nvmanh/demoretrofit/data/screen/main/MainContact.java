@@ -12,5 +12,6 @@ public interface MainContact {
 
     interface Presenter {
         void getHeros();
+        void searchHeros(String key);
     }
 }

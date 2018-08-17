@@ -17,7 +17,17 @@ public class HerosRepository implements HerosDataSource.HerosRemoteDataSource{
     }
 
     @Override
+    public void getHero(int id, HerosDataSource.OnCompleteListener callBack) {
+        mRemoteDataSource.getHero(id, callBack);
+    }
+
+    @Override
     public void getHeros(HerosDataSource.OnCompleteListener callback) {
         mRemoteDataSource.getHeros(callback);
+    }
+
+    @Override
+    public void searchHeros(String key, HerosDataSource.OnCompleteListener callback) {
+        mRemoteDataSource.searchHeros(key, callback);
     }
 }

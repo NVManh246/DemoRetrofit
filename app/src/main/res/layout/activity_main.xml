@@ -6,12 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".data.screen.main.MainActivity">
 
+    <EditText
+        android:id="@+id/eidt_hero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_hero"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/eidt_hero"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         />
